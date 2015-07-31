@@ -1,0 +1,16 @@
+Config { font = "-*-terminus-medium-*-*-*-12-*-*-*-*-*-*-*"
+       , bgColor = "#3f3f3f"
+       , fgColor = "#dcdccc"
+       , position = TopW L 100
+       , commands = [ Run Weather "LJLJ" ["-t"," C","-L","42.42","-H","23.20","--normal","green","--high","red","--low","lightblue"] 36000
+                    , Run Cpu ["-L","3","-H","50","--normal","green","--high","red"] 10
+                    , Run Network "eth0" ["-L","0","-H","32","--normal","green","--high","red"] 10
+                    , Run Memory ["-t","Mem: %"] 10
+                    , Run Swap [] 10
+                    , Run Date "%a %b %_d %l:%M" "date" 10
+                    , Run StdinReader
+                    ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = "%StdinReader% }{ %cpu% | %memory% * %swap% | %eth0%   %date% | %LJLJ%"
+       }
