@@ -66,6 +66,7 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'Shutnik/jshint2.vim'
 Plugin 'eparreno/vim-l9'
 Plugin 'FuzzyFinder'
+Plugin 'fatih/vimg-go'
 
 " Colorschemes
 Plugin 'flazz/vim-colorschemes'
