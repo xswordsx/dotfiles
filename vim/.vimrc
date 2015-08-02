@@ -66,7 +66,7 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'Shutnik/jshint2.vim'
 Plugin 'eparreno/vim-l9'
 Plugin 'FuzzyFinder'
-Plugin 'fatih/vimg-go'
+Plugin 'fatih/vim-go'
 
 " Colorschemes
 Plugin 'flazz/vim-colorschemes'
@@ -93,6 +93,9 @@ filetype plugin indent on
 
 " Enable syntax highlighting
 syntax on
+
+" Just enable 256 globally
+set t_Co=256
 
 colorscheme wombat256
 set background=dark
@@ -176,3 +179,10 @@ autocmd QuickFixCmdPost    l* nested lwindow
 " set runtimepath+=~/vimfiles/L9/
 " set runtimepath+=~/vimfiles/fuzzyfinder/
 command FUF FufFile
+
+" ====================
+" Aliases
+" ====================
+
+command NT NERDTreeToggle
+
