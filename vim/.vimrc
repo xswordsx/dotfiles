@@ -6,6 +6,9 @@
 
 autocmd! bufwritepost .vimrc source %
 
+" Treat .md & similar files as markdown
+au BufNewFile,BufRead *.markdown,*.mdown,*.mkd,*.mkdn,*.mdwn,*.md  set ft=markdown
+
 " bind Ctrl+<movement> keys to move around the windows, instead of using Ctrl+w
 " + <movement>
 " Every unnecessary keystroke that can be saved is good for your health :)
@@ -67,7 +70,7 @@ Plugin 'Shutnik/jshint2.vim'
 Plugin 'eparreno/vim-l9'
 Plugin 'FuzzyFinder'
 Plugin 'fatih/vim-go'
-
+Plugin 'sotte/presenting.vim'
 " Colorschemes
 Plugin 'flazz/vim-colorschemes'
 
