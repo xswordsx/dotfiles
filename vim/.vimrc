@@ -70,11 +70,18 @@ Plugin 'Shutnik/jshint2.vim'
 Plugin 'eparreno/vim-l9'
 Plugin 'FuzzyFinder'
 Plugin 'fatih/vim-go'
+" I hope I won't need this soon
+Plugin 'vim-scripts/clips.vim'
 Plugin 'sotte/presenting.vim'
 " Colorschemes
 Plugin 'flazz/vim-colorschemes'
-
+" Don't commit this
+" Plugin 'rust-lang/rust.vim'
 call vundle#end()
+
+" add read from PDF option
+:command! -complete=file -nargs=1 Rpdf :r !pdftotext -nopgbrk <q-args> -
+:command! -complete=file -nargs=1 Rpdf :r !pdftotext -nopgbrk <q-args> - |fmt -csw78
 
 set laststatus=2
 " Fix airline issues
